@@ -1,0 +1,9 @@
+[Unit]
+Description=Linux Server Monitoring and Auto-Healing Service
+After=network.target
+
+[Service]
+Type=oneshot
+User=root
+ExecStart=/bin/bash "/mnt/c/Users/TNC STORE.PK/Documents/linux-server-monitor/scripts/system-monitor.sh"
+ExecStartPost=/bin/bash "/mnt/c/Users/TNC STORE.PK/Documents/linux-server-monitor/scripts/service-monitor.sh"
